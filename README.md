@@ -25,13 +25,23 @@ Khelo Bharat is an AI-powered physical fitness and sports initiative platform bu
 
 ### Installation
 
-1. Install dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/GarvitSingh13/KheloBharat.git
+   ```
+
+2. Navigate to the core application directory:
+   ```bash
+   cd "Khelo Bharat"
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Set up environment variables:
-   Create a `.env.local` file in this directory and add your Firebase configuration:
+4. Set up environment variables:
+   Create a `.env.local` file in the Next.js app directory (`Khelo Bharat`) and add your Firebase and Genkit configuration:
    ```env
    NEXT_PUBLIC_FIREBASE_API_KEY="..."
    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="..."
@@ -39,14 +49,22 @@ Khelo Bharat is an AI-powered physical fitness and sports initiative platform bu
    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="..."
    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="..."
    NEXT_PUBLIC_FIREBASE_APP_ID="..."
+   
+   # Add any other required API keys
    ```
 
-3. Run the development server:
+5. Run the development server:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:9002](http://localhost:9002) with your browser to see the result.
+6. Open [http://localhost:9002](http://localhost:9002) with your browser to see the result.
+
+## Structure
+The core application code is located in the `Khelo Bharat` subdirectory:
+- `src/ai/`: Genkit setup, AI logic, and evaluation flows.
+- `src/app/`: Next.js App Router covering routes like `dashboard`, `leaderboard`, `submissions`, `profile`, and `auth`.
+- `src/components/`: Reusable UI components including form UI, dialogs, and splash screens.
 
 ## Deployment
 This project is configured out-of-the-box for serverless hosting using `apphosting.yaml`. You can deploy this easily to Firebase App Hosting, Vercel, or any other hosting provider that supports Next.js.
